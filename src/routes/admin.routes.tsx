@@ -16,6 +16,8 @@ type TSidebarItem = {
     children?: TSidebarItem[];
 };
 
+
+// routes
 const adminPaths = [
     {
         name: 'Dashboard',
@@ -49,6 +51,8 @@ const adminPaths = [
     },
 ];
 
+
+// sidebar items
 export const adminSidebarItems = adminPaths.reduce(
     (acc: TSidebarItem[], item) => {
         if (item.path && item.name) {
@@ -75,7 +79,6 @@ export const adminSidebarItems = adminPaths.reduce(
 );
 
 //* Programmer way
-
 export const adminRoutes = adminPaths.reduce((acc: TRoute[], item) => {
     if (item.path && item.element) {
         acc.push({

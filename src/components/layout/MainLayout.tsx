@@ -1,32 +1,10 @@
 import { Layout, Menu } from 'antd';
 import { FC } from 'react';
+import { adminSidebarItems } from '../../routes/admin.routes';
 
 const { Header, Content, Footer, Sider } = Layout;
 
-const items = [
-    {
-        key: "1",
-        label: "Dashboard"
-    },
-    {
-        key: "2",
-        label: "Profile"
-    },
-    {
-        key: "3",
-        label: "User Management",
-        children: [
-            {
-                key: "31",
-                label: "Create Admin"
-            },
-            {
-                key: "32",
-                label: "Create User"
-            },
-        ]
-    },
-]
+
 
 const MainLayout: FC = () => {
     return (
@@ -56,7 +34,7 @@ const MainLayout: FC = () => {
                     theme="dark"
                     mode="inline"
                     defaultSelectedKeys={['4']}
-                    items={items} />
+                    items={adminSidebarItems} />
             </Sider>
             <Layout>
                 <Header style={{ padding: 0 }} />
