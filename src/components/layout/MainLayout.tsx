@@ -9,8 +9,10 @@ const { Header, Content } = Layout;
 const MainLayout: FC = () => {
     return (
         <Layout style={{ height: '100vh' }}>
+
             {/* sidebar */}
             <Sidebar />
+            
             {/* layout */}
             <Layout>
                 <Header style={{ padding: 0 }} />
